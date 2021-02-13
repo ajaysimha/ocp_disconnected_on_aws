@@ -1,0 +1,21 @@
+apiVersion: config.openshift.io/v1
+kind: Infrastructure
+metadata:
+  creationTimestamp: null
+  name: cluster
+spec:
+  cloudConfig:
+    name: ""
+  platformSpec:
+    aws: {}
+    type: AWS
+status:
+  apiServerInternalURI: https://api-int.dev.ocp-example.com:6443
+  apiServerURL: https://api.dev.ocp-example.com:6443
+  etcdDiscoveryDomain: dev.ocp-example.com
+  infrastructureName: dev-k7jhm
+  platform: AWS
+  platformStatus:
+    aws:
+      region: us-east-2
+    type: AWS

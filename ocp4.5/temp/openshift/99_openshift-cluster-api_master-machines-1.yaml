@@ -1,0 +1,57 @@
+apiVersion: machine.openshift.io/v1beta1
+kind: Machine
+metadata:
+  creationTimestamp: null
+  labels:
+    machine.openshift.io/cluster-api-cluster: dev-g8wrw
+    machine.openshift.io/cluster-api-machine-role: master
+    machine.openshift.io/cluster-api-machine-type: master
+  name: dev-g8wrw-master-1
+  namespace: openshift-machine-api
+spec:
+  metadata:
+    creationTimestamp: null
+  providerSpec:
+    value:
+      ami:
+        id: ami-0ba8d5168e13bbcce
+      apiVersion: awsproviderconfig.openshift.io/v1beta1
+      blockDevices:
+      - ebs:
+          encrypted: true
+          iops: 0
+          kmsKey:
+            arn: ""
+          volumeSize: 120
+          volumeType: gp2
+      credentialsSecret:
+        name: aws-cloud-credentials
+      deviceIndex: 0
+      iamInstanceProfile:
+        id: dev-g8wrw-master-profile
+      instanceType: m4.xlarge
+      kind: AWSMachineProviderConfig
+      loadBalancers:
+      - name: dev-g8wrw-int
+        type: network
+      metadata:
+        creationTimestamp: null
+      placement:
+        availabilityZone: us-east-2b
+        region: us-east-2
+      securityGroups:
+      - filters:
+        - name: tag:Name
+          values:
+          - dev-g8wrw-master-sg
+      subnet:
+        filters:
+        - name: tag:Name
+          values:
+          - dev-g8wrw-private-us-east-2b
+      tags:
+      - name: kubernetes.io/cluster/dev-g8wrw
+        value: owned
+      userDataSecret:
+        name: master-user-data
+status: {}

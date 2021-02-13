@@ -1,0 +1,51 @@
+[
+  {
+    "ParameterKey": "InfrastructureName", 
+    "ParameterValue": "dev-k7jhm" 
+  },
+  {
+    "ParameterKey": "RhcosAmi", 
+    "ParameterValue": "ami-0f4ecf819275850dd" 
+  },
+  {
+    "ParameterKey": "AllowedBootstrapSshCidr", 
+    "ParameterValue": "0.0.0.0/0" 
+  },
+  {
+    "ParameterKey": "PublicSubnet", 
+    "ParameterValue": "subnet-053d9dd83d208b3aa" 
+  },
+  {
+    "ParameterKey": "MasterSecurityGroupId", 
+    "ParameterValue": "sg-0042cc3669e507214"
+  },
+  {
+    "ParameterKey": "VpcId", 
+    "ParameterValue": "vpc-ed538f86" 
+  },
+  {
+    "ParameterKey": "BootstrapIgnitionLocation", 
+    "ParameterValue": "s3://dev-infra/bootstrap.ign" 
+  },
+  {
+    "ParameterKey": "AutoRegisterELB", 
+    "ParameterValue": "yes" 
+  },
+  {
+    "ParameterKey": "RegisterNlbIpTargetsLambdaArn", 
+    "ParameterValue": "arn:aws:lambda:us-east-2:147415857303:function:dev-lb-RegisterNlbIpTargets-1JMPTM86CN8NX"
+  },
+  {
+    "ParameterKey": "ExternalApiTargetGroupArn", 
+    "ParameterValue": "arn:aws:elasticloadbalancing:us-east-2:147415857303:targetgroup/dev-l-Exter-ZNSR635WGZHH/980bdc6fceba59ff"
+  },
+  {
+    "ParameterKey": "InternalApiTargetGroupArn", 
+    "ParameterValue": "arn:aws:elasticloadbalancing:us-east-2:147415857303:targetgroup/dev-l-Inter-7M533G5630NM/8a35b2d19f1bfeea"
+  },
+  {
+    "ParameterKey": "InternalServiceTargetGroupArn", 
+    "ParameterValue": "arn:aws:elasticloadbalancing:us-east-2:147415857303:targetgroup/dev-l-Inter-UPJPIBB66DFW/b50e767f9a5d94e5"
+  }
+]
+

@@ -1,0 +1,67 @@
+apiVersion: machine.openshift.io/v1beta1
+kind: MachineSet
+metadata:
+  creationTimestamp: null
+  labels:
+    machine.openshift.io/cluster-api-cluster: dev-g8wrw
+  name: dev-g8wrw-worker-us-east-2c
+  namespace: openshift-machine-api
+spec:
+  replicas: 0
+  selector:
+    matchLabels:
+      machine.openshift.io/cluster-api-cluster: dev-g8wrw
+      machine.openshift.io/cluster-api-machineset: dev-g8wrw-worker-us-east-2c
+  template:
+    metadata:
+      creationTimestamp: null
+      labels:
+        machine.openshift.io/cluster-api-cluster: dev-g8wrw
+        machine.openshift.io/cluster-api-machine-role: worker
+        machine.openshift.io/cluster-api-machine-type: worker
+        machine.openshift.io/cluster-api-machineset: dev-g8wrw-worker-us-east-2c
+    spec:
+      metadata:
+        creationTimestamp: null
+      providerSpec:
+        value:
+          ami:
+            id: ami-0ba8d5168e13bbcce
+          apiVersion: awsproviderconfig.openshift.io/v1beta1
+          blockDevices:
+          - ebs:
+              encrypted: true
+              iops: 0
+              kmsKey:
+                arn: ""
+              volumeSize: 120
+              volumeType: gp2
+          credentialsSecret:
+            name: aws-cloud-credentials
+          deviceIndex: 0
+          iamInstanceProfile:
+            id: dev-g8wrw-worker-profile
+          instanceType: m4.large
+          kind: AWSMachineProviderConfig
+          metadata:
+            creationTimestamp: null
+          placement:
+            availabilityZone: us-east-2c
+            region: us-east-2
+          securityGroups:
+          - filters:
+            - name: tag:Name
+              values:
+              - dev-g8wrw-worker-sg
+          subnet:
+            filters:
+            - name: tag:Name
+              values:
+              - dev-g8wrw-private-us-east-2c
+          tags:
+          - name: kubernetes.io/cluster/dev-g8wrw
+            value: owned
+          userDataSecret:
+            name: worker-user-data
+status:
+  replicas: 0

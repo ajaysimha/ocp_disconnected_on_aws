@@ -1,0 +1,94 @@
+{
+    "Stacks": [
+        {
+            "StackId": "arn:aws:cloudformation:us-east-2:147415857303:stack/dev-lb/ce9d6030-6588-11eb-854d-02d636a25126",
+            "StackName": "dev-lb",
+            "Description": "Template for OpenShift Cluster Network Elements (Route53 & LBs)",
+            "Parameters": [
+                {
+                    "ParameterKey": "InfrastructureName",
+                    "ParameterValue": "dev-k7jhm"
+                },
+                {
+                    "ParameterKey": "PrivateSubnets",
+                    "ParameterValue": "subnet-9faecbd3"
+                },
+                {
+                    "ParameterKey": "HostedZoneName",
+                    "ParameterValue": "ocp-example.com"
+                },
+                {
+                    "ParameterKey": "VpcId",
+                    "ParameterValue": "vpc-ed538f86"
+                },
+                {
+                    "ParameterKey": "HostedZoneId",
+                    "ParameterValue": "Z0497599361MSQHQOYW7J"
+                },
+                {
+                    "ParameterKey": "PublicSubnets",
+                    "ParameterValue": "subnet-053d9dd83d208b3aa"
+                },
+                {
+                    "ParameterKey": "ClusterName",
+                    "ParameterValue": "dev"
+                }
+            ],
+            "CreationTime": "2021-02-02T18:59:42.305000+00:00",
+            "RollbackConfiguration": {},
+            "StackStatus": "CREATE_COMPLETE",
+            "DisableRollback": false,
+            "NotificationARNs": [],
+            "Capabilities": [
+                "CAPABILITY_NAMED_IAM"
+            ],
+            "Outputs": [
+                {
+                    "OutputKey": "ExternalApiTargetGroupArn",
+                    "OutputValue": "arn:aws:elasticloadbalancing:us-east-2:147415857303:targetgroup/dev-l-Exter-1MCYT1YXJOUDV/4b234372eb217b2d",
+                    "Description": "ARN of the external API target group."
+                },
+                {
+                    "OutputKey": "InternalApiTargetGroupArn",
+                    "OutputValue": "arn:aws:elasticloadbalancing:us-east-2:147415857303:targetgroup/dev-l-Inter-FPT8RSNGM3KS/2b173b4468afdc20",
+                    "Description": "ARN of the internal API target group."
+                },
+                {
+                    "OutputKey": "ApiServerDnsName",
+                    "OutputValue": "api-int.dev.ocp-example.com",
+                    "Description": "Full hostname of the API server, which is required for the Ignition config files."
+                },
+                {
+                    "OutputKey": "PrivateHostedZoneId",
+                    "OutputValue": "Z01590742DNCWCADGZQ0F",
+                    "Description": "Hosted zone ID for the private DNS, which is required for private records."
+                },
+                {
+                    "OutputKey": "InternalApiLoadBalancerName",
+                    "OutputValue": "net/dev-k7jhm-int/44b00cff3032b7ae",
+                    "Description": "Full name of the internal API load balancer."
+                },
+                {
+                    "OutputKey": "RegisterNlbIpTargetsLambda",
+                    "OutputValue": "arn:aws:lambda:us-east-2:147415857303:function:dev-lb-RegisterNlbIpTargets-F0PC51NSQ409",
+                    "Description": "Lambda ARN useful to help register or deregister IP targets for these load balancers."
+                },
+                {
+                    "OutputKey": "InternalServiceTargetGroupArn",
+                    "OutputValue": "arn:aws:elasticloadbalancing:us-east-2:147415857303:targetgroup/dev-l-Inter-GQMAVG7DT17L/e86ecb537201ed7e",
+                    "Description": "ARN of the internal service target group."
+                },
+                {
+                    "OutputKey": "ExternalApiLoadBalancerName",
+                    "OutputValue": "net/dev-k7jhm-ext/c20a7dc0dc1f362c",
+                    "Description": "Full name of the external API load balancer."
+                }
+            ],
+            "Tags": [],
+            "EnableTerminationProtection": false,
+            "DriftInformation": {
+                "StackDriftStatus": "NOT_CHECKED"
+            }
+        }
+    ]
+}

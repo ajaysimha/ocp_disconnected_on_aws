@@ -1,0 +1,10 @@
+apiVersion: operator.openshift.io/v1alpha1
+kind: ImageContentSourcePolicy
+metadata:
+  creationTimestamp: null
+  name: image-policy-0
+spec:
+  repositoryDigestMirrors:
+  - mirrors:
+    - ip-172-31-27-220.us-east-2.compute.internal:5000/ocp/openshift4
+    source: quay.io/openshift-release-dev/ocp-release

@@ -1,0 +1,28 @@
+apiVersion: machineconfiguration.openshift.io/v1
+kind: MachineConfig
+metadata:
+  creationTimestamp: null
+  labels:
+    machineconfiguration.openshift.io/role: worker
+  name: 99-worker-ssh
+spec:
+  config:
+    ignition:
+      config: {}
+      security:
+        tls: {}
+      timeouts: {}
+      version: 2.2.0
+    networkd: {}
+    passwd:
+      users:
+      - name: core
+        sshAuthorizedKeys:
+        - |
+          ssh-rsa AAAAB3NzaC1yc2EAAAADAQABAAACAQDkKwqeuuwMUPglvfsZWHxhInbrnIBYedgwvp5RbSHTRX043oWlFRBlpjs0FgRIbD5kT59OqxtiGLRkHEHTp0x1pGMYefPIFpZgk47iRJMOo7huX4dDNva30e0vZwlOEBK57ERUoKb0v0FflrP7wwmQ/ZnjHx9N5RkE9Ejv0sqJk5SJRmK0tiNKgdxlPpAdN4N8ncbK1jxHnMuKfr6N5fcoKvbYk1PGoXt1syy/j/2C7KOmtyp/FS/bXeZv77dRv97z4VZngN23Y2knG2MKS7EAMooNGWkFMui7PZr77seQp8CW7nfy1KdlqSN/BhMlpeUGybFqFB8BM7U2SnriNljHb31cmLoVF69pDua2SbkGDiR5wJSdsVNyZbPnmzib696vgGEfIIcEGOA7H9QqSGP8EI1fJTsQJc+i2hYW+fbhiguHArdDvgufQMrcvtcWMbBql8GPlPCYhHiidEqrzfx7Kaaffmb/mcHCYqp10DrEIiWzcT8AKL2lJzcy6a8XkGJQ3ySkXOO+ledpURGH4b5Iz4RsfG4fZe8pJcAQI8Giiw4Wz4PDYc8rJGbeV6QZS0WITMsuOXWtDGZ9hvSIwjGFBY/1uHFVzp+4iZXWEJlNOc0bxcDVyRhGTf8O9h0pa4uP028/w/WTHujxf4GuWxQ7bByjVgYKSXr54fQdVr6p2w== root@ip-172-31-27-220.us-east-2.compute.internal
+    storage: {}
+    systemd: {}
+  fips: false
+  kernelArguments: null
+  kernelType: ""
+  osImageURL: ""

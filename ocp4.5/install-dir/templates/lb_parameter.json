@@ -1,0 +1,30 @@
+[
+  {
+    "ParameterKey": "ClusterName", 
+    "ParameterValue": "dev" 
+  },
+  {
+    "ParameterKey": "InfrastructureName", 
+    "ParameterValue": "dev-vldrt" 
+  },
+  {
+    "ParameterKey": "HostedZoneId", 
+    "ParameterValue": "Z0497599361MSQHQOYW7J" 
+  },
+  {
+    "ParameterKey": "HostedZoneName", 
+    "ParameterValue": "ocp-example.com" 
+  },
+  {
+    "ParameterKey": "PublicSubnets", 
+    "ParameterValue": "subnet-053d9dd83d208b3aa" 
+  },
+  {
+    "ParameterKey": "PrivateSubnets", 
+    "ParameterValue": "subnet-5e3d0024"
+  },
+  {
+    "ParameterKey": "VpcId", 
+    "ParameterValue": "vpc-ed538f86" 
+  }
+]

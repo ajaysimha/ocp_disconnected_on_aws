@@ -1,0 +1,74 @@
+[
+  {
+    "ParameterKey": "InfrastructureName", 
+    "ParameterValue": "dev-k7jhm" 
+  },
+  {
+    "ParameterKey": "RhcosAmi", 
+    "ParameterValue": "ami-0f4ecf819275850dd" 
+  },
+  {
+    "ParameterKey": "AutoRegisterDNS", 
+    "ParameterValue": "yes" 
+  },
+  {
+    "ParameterKey": "PrivateHostedZoneId", 
+    "ParameterValue": "Z05623901CP2H9QUGNS4D"
+  },
+  {
+    "ParameterKey": "PrivateHostedZoneName", 
+    "ParameterValue": "dev.ocp-example.com"
+  },
+  {
+    "ParameterKey": "Master0Subnet", 
+    "ParameterValue": "subnet-5e3d0024"
+  },
+  {
+    "ParameterKey": "Master1Subnet", 
+    "ParameterValue": "subnet-5e3d0024"
+  },
+  {
+    "ParameterKey": "Master2Subnet", 
+    "ParameterValue": "subnet-5e3d0024"
+  },
+  {
+    "ParameterKey": "MasterSecurityGroupId", 
+    "ParameterValue": "sg-0042cc3669e507214"
+  },
+  {
+    "ParameterKey": "IgnitionLocation", 
+    "ParameterValue": "https://api-int.dev.ocp-example.com:22623/config/master" 
+  },
+  {
+    "ParameterKey": "CertificateAuthorities", 
+    "ParameterValue": "data:text/plain;charset=utf-8;base64,LS0tLS1CRUdJTiBDRVJUSUZJQ0FURS0tLS0tCk1JSURFRENDQWZpZ0F3SUJBZ0lJZTF4d0s0aG5nYXN3RFFZSktvWklodmNOQVFFTEJRQXdKakVTTUJBR0ExVUUKQ3hNSmIzQmxibk5vYVdaME1SQXdEZ1lEVlFRREV3ZHliMjkwTFdOaE1CNFhEVEl4TURJd01qRTNORGswTUZvWApEVE14TURFek1URTNORGswTUZvd0pqRVNNQkFHQTFVRUN4TUpiM0JsYm5Ob2FXWjBNUkF3RGdZRFZRUURFd2R5CmIyOTBMV05oTUlJQklqQU5CZ2txaGtpRzl3MEJBUUVGQUFPQ0FROEFNSUlCQ2dLQ0FRRUF1ZmhVZzVLMUI3SGwKSXRsVEZwSnp0YnhkQjdwWWJOZWRKVVRzUWcyRmduc0dsTjFIUkx6dlFmN1Z0M0JnK2IyWW9na3Z1WmVwMEhTTAppanliMjdGVmJBcXVNY1NuTHcxekFDeWZodEp6KzVlL0dLbmhLZkU1Rkwzb2hiWXhZWnhMZTRoSU9ZZmZUVklDCjJrMzltUGVZcG1SQ1hJbmxvMzFXQnR6ci9LMmJJenJNMlpIaVpIS1ZscHNWMGFXUHZBUURjQU42Z1JqUHBOUEcKbEFJMWtQWE8wcmZWTFo0WDMwT1hvbkpHMnJhbExWZkttSWM5NzF2eHppWmw2YVdmd0t1cytvQnRRUmlPUE5lOQpmdEZGRHBxM2ZkS25xaUs1SUYxOEZPUFY2TmR1RVkvMTN0dWhBRDdQK1EyZEFRc1lWYy9qNWV5NHFmTnhjMk1jCkFUZGRCL2MyUlFJREFRQUJvMEl3UURBT0JnTlZIUThCQWY4RUJBTUNBcVF3RHdZRFZSMFRBUUgvQkFVd0F3RUIKL3pBZEJnTlZIUTRFRmdRVWZEUkxUY2NJSWw1OE9lQXp4WU1ES2hEVTlJVXdEUVlKS29aSWh2Y05BUUVMQlFBRApnZ0VCQUk5N29UMGEwK0NUa1FNSDZVb25ZODUwd3M1bWt2ZVBiSWkrOFZ5aVByRFpQejY4ZmZPa2YxUCs4SXVVCnNwcXNLREJlVUxxaURNQ1RZVTllR29qZFkzV2pMTktjeVJGcHhrSVJHSkpFUXRnZmZpeTYzTjRWR1VOaitXUTIKcldnWlJsWFQxNGlVR2o1STZnMW1oSXdIdmdTcm00WStNNjRzMURQTjU4VS9nWE9xdW5PQlVvOFZMWFBMSllrZQpBbnhtaVYxb2RrRnJUamx2K24yQldtQ0Z6MVgrcFl3VTMrbDZTSC9DcnV2MFhmd3BCM1JCaG50OTVPQUYrekkwCklWeTBBV2l0cTBoV21oajJaSE9MRHhXWjcwZEZwejJtblZ6OStmWm5qUFZKdkJncGoydmZ0UTdrNWh2RE5JSEQKZzJJanR0YSs1dFRTSURQTnZodjhLK3UrejFVPQotLS0tLUVORCBDRVJUSUZJQ0FURS0tLS0tCg=="
+  },
+  {
+    "ParameterKey": "MasterInstanceProfileName", 
+    "ParameterValue": "dev-sec-MasterInstanceProfile-108ZSSCJUHODY"
+  },
+  {
+    "ParameterKey": "MasterInstanceType", 
+    "ParameterValue": "m4.xlarge" 
+  },
+  {
+    "ParameterKey": "AutoRegisterELB", 
+    "ParameterValue": "yes" 
+  },
+  {
+    "ParameterKey": "RegisterNlbIpTargetsLambdaArn", 
+    "ParameterValue": "arn:aws:lambda:us-east-2:147415857303:function:dev-lb-RegisterNlbIpTargets-1JMPTM86CN8NX"
+  },
+  {
+    "ParameterKey": "ExternalApiTargetGroupArn", 
+    "ParameterValue": "arn:aws:elasticloadbalancing:us-east-2:147415857303:targetgroup/dev-l-Exter-ZNSR635WGZHH/980bdc6fceba59ff"
+  },
+  {
+    "ParameterKey": "InternalApiTargetGroupArn", 
+    "ParameterValue": "arn:aws:elasticloadbalancing:us-east-2:147415857303:targetgroup/dev-l-Inter-7M533G5630NM/8a35b2d19f1bfeea"
+  },
+  {
+    "ParameterKey": "InternalServiceTargetGroupArn", 
+    "ParameterValue": "arn:aws:elasticloadbalancing:us-east-2:147415857303:targetgroup/dev-l-Inter-UPJPIBB66DFW/b50e767f9a5d94e5"
+  }
+]

@@ -1,0 +1,1 @@
+{"clusterName":"dev","clusterID":"95dd14b2-c048-4b7f-8316-074775e5cc9f","infraID":"dev-vldrt","aws":{"region":"us-east-2","identifier":[{"kubernetes.io/cluster/dev-vldrt":"owned"},{"openshiftClusterID":"95dd14b2-c048-4b7f-8316-074775e5cc9f"}]}}

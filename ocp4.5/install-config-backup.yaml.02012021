@@ -1,0 +1,66 @@
+apiVersion: v1
+baseDomain: ocp-example.com
+compute:
+- architecture: amd64
+  hyperthreading: Enabled
+  name: worker
+  platform: {}
+  replicas: 0
+controlPlane:
+  architecture: amd64
+  hyperthreading: Enabled
+  name: master
+  platform: {}
+  replicas: 3
+metadata:
+  creationTimestamp: null
+  name: dev
+networking:
+  clusterNetwork:
+  - cidr: 10.128.0.0/14
+    hostPrefix: 23
+  machineNetwork:
+  - cidr: 10.0.0.0/16
+  networkType: OpenShiftSDN
+  serviceNetwork:
+  - 172.30.0.0/16
+platform:
+  aws:
+    region: us-east-2
+publish: External
+pullSecret: '{"auths":{"quay.io":{"auth":"b3BlbnNoaWZ0LXJlbGVhc2UtZGV2K2tnYXJnZTc5MWU3ZXAwcW42bWx4ZXp4eHNlc2lpdW5xOG1jOkhVREk2Mk1NRDBLMjZLM1FSRjdGR05CQkRKRzZRNzFRTFI0SE1TVEhLQjlJWlRNTEUxVVYwUDRGVkxLRDNGQVU=","email":"kgarge79@in.ibm.com"},"registry:5000":{"auth":"bXl1c2VyOm15cGFzc3dvcmQ=","email":"asimha@redhat.com"}}}'
+additionalTrustBundle: |
+-----BEGIN CERTIFICATE-----
+MIIEdTCCA12gAwIBAgIUfZ43ZDD6P3niQi6/KUk6HKhoMvYwDQYJKoZIhvcNAQEL
+BQAwgasxCzAJBgNVBAYTAlVTMQswCQYDVQQIDAJOQzEQMA4GA1UEBwwHUmFsZWln
+aDEWMBQGA1UECgwNUmVkIEhhdCwgSW5jLjEMMAoGA1UECwwDTGFiMTQwMgYDVQQD
+DCtpcC0xNzItMzEtMjctMjIwLnVzLWVhc3QtMi5jb21wdXRlLmludGVybmFsMSEw
+HwYJKoZIhvcNAQkBFhJub2VtYWlsQHJlZGhhdC5jb20wIBcNMjEwMjAxMTkwOTIy
+WhgPMjEyMTAxMDgxOTA5MjJaMIGrMQswCQYDVQQGEwJVUzELMAkGA1UECAwCTkMx
+EDAOBgNVBAcMB1JhbGVpZ2gxFjAUBgNVBAoMDVJlZCBIYXQsIEluYy4xDDAKBgNV
+BAsMA0xhYjE0MDIGA1UEAwwraXAtMTcyLTMxLTI3LTIyMC51cy1lYXN0LTIuY29t
+cHV0ZS5pbnRlcm5hbDEhMB8GCSqGSIb3DQEJARYSbm9lbWFpbEByZWRoYXQuY29t
+MIIBIjANBgkqhkiG9w0BAQEFAAOCAQ8AMIIBCgKCAQEApBzYSCRBfP15XMkI3+Ty
+gmSH9WXPQnkIJvfpoPWzobVQxSE2jzpB5hUQG+V3DBtN42bgdyEYCMtnxK+lmSsK
+r7CO5VqAkQJBnN33+LoCYzE98L0UvcMNmU2SrulzYBNWG5oTMpF5ssuqfJVi81JO
+Yv83RSeOfU42yHVmYLBIbQyy0FciSkt8rqecASN56tX0XZQfIWgz2mlsK/2D9+Zy
+yxMzUsgsNKBmfXs198vE9TTJHH+AeaFajG0nJSAKl59P6mpuSMqi3xxSYQdzJ96A
+iyJsZzbhe3uC1Aol3eD8XY8ckMDYzIp8R2lK84jnxjTzkmGDKZMuM86L/lpr838T
+DwIDAQABo4GMMIGJMB0GA1UdDgQWBBQs1LBnzlDfIv9/cDHpdSWQvIJ9AzAfBgNV
+HSMEGDAWgBQs1LBnzlDfIv9/cDHpdSWQvIJ9AzAPBgNVHRMBAf8EBTADAQH/MDYG
+A1UdEQQvMC2CK2lwLTE3Mi0zMS0yNy0yMjAudXMtZWFzdC0yLmNvbXB1dGUuaW50
+ZXJuYWwwDQYJKoZIhvcNAQELBQADggEBAE4JJdty0+0c44PYENoZB0mYeNI2/Ivo
+H7mb94JEKyslQZtXZZ4Z5p3uNg4c0GRlh0JB/w4Vq+5wAiiuWJmotv3qTgtJfH2s
+/DEPvwQ/fF3f9dA3lfzvSktyK7ZFib9iIXmtJq2tL5v8r5gHMpHw24FCYzKG0H7Q
++aAoMaoBlMu65wy3TuimMQwpqJSXqDfWYf/VS+v/MASCQFwkzeQa8R5qTAQl3gjQ
+HyLZ1oK6aqhK9D2Tosadkh9rO33W2n5pVANUg6brthGiLh7GQN+mghptW68lYfzU
+VgX+rtrsVt+ytkHrberNABuXNd8VPIGApHn44qpgpO1T1VjWPbMLtrY=
+-----END CERTIFICATE-----
+imageContentSources:
+- mirrors:
+  - ip-172-31-27-220.us-east-2.compute.internal:5000:/ocp/openshift4/
+  source: quay.io/openshift-release-dev/ocp-release
+- mirrors:
+  - ip-172-31-27-220.us-east-2.compute.internal:5000:/ocp/openshift4/
+  source: registry.svc.ci.openshift.org/ocp/release
+
